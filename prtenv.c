@@ -2,7 +2,10 @@
 #include <stdlib.h>
 
 void main(){
-    char* shell = getenv("MYBASH");
-    if (shell)
-        printf("MYBASH: %x\n", (unsigned int)shell);
+    char* bash = getenv("MYBASH");
+    char* arg = getenv("MYARG");
+    if (bash)
+        printf("MYBASH: %x\n", (unsigned int)bash);
+    if (arg)
+        printf("MYARG: %x\n", (unsigned int)arg);
 }
